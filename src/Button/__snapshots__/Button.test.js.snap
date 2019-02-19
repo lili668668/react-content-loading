@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should not change anything when trigger default function 1`] = `
+<button
+  onClick={[Function]}
+/>
+`;
+
+exports[`Button should render correctly 1`] = `
+<button
+  onClick={[Function]}
+/>
+`;

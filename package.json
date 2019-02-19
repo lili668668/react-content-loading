@@ -1,0 +1,56 @@
+{
+  "name": "react-content-loading",
+  "version": "1.0.0",
+  "description": "A loading component",
+  "main": "lib",
+  "files": [
+    "lib",
+    "package.json",
+    "README",
+    "LICENSE"
+  ],
+  "repository": "https://github.com/lili668668/react-content-loading",
+  "author": "ballfish",
+  "license": "MIT",
+  "private": false,
+  "homepage": "http://lili668668.github.io/react-content-loading",
+  "bugs": {
+    "url": "https://github.com/lili668668/react-content-loading/issues"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "test": "jest",
+    "test:watch": "jest --coverage && opn ./coverage/index.html && jest --watchAll",
+    "docs:dev": "docz dev",
+    "docs:build": "rimraf docs && docz build",
+    "docs:deploy": "gh-pages -d docs",
+    "build": "rimraf lib && babel src -d lib --ignore \"src/**/*.test.js\" --only \"src/**/*.js\"",
+    "start": "yarn docs:dev",
+    "release": "yarn lint && yarn test && yarn build && yarn doc:build && yarn build && npm publish && yarn doc:deploy"
+  },
+  "dependencies": {
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/preset-react": "latest",
+    "babel-jest": "latest",
+    "docz": "latest",
+    "docz-theme-default": "latest",
+    "enzyme": "latest",
+    "enzyme-adapter-react-16": "latest",
+    "enzyme-to-json": "latest",
+    "eslint": "latest",
+    "eslint-plugin-react": "latest",
+    "gh-pages": "latest",
+    "jest": "latest",
+    "opn-cli": "latest",
+    "react-test-renderer": "latest",
+    "rimraf": "latest"
+  }
+}
