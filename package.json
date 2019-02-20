@@ -1,6 +1,6 @@
 {
   "name": "react-content-loading",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A loading component",
   "main": "lib",
   "files": [
@@ -28,7 +28,8 @@
     "docs:deploy": "gh-pages -d docs",
     "build": "rimraf lib && babel src -d lib --ignore \"src/**/*.test.js\" --only \"src/**/*.js\"",
     "start": "yarn docs:dev",
-    "release": "yarn lint && yarn test && yarn build && yarn docs:build && npm publish && yarn docs:deploy"
+    "release": "yarn lint && yarn test && yarn build && yarn docs:build",
+    "publish": "yarn docs:deploy"
   },
   "dependencies": {
     "color": "^3.1.0",
