@@ -22,6 +22,7 @@
     "lint:fix": "eslint src --fix",
     "test": "jest",
     "test:watch": "jest --coverage && opn ./coverage/index.html && jest --watchAll",
+    "test:codecov": "jest && codecov",
     "docs:dev": "docz dev",
     "docs:build": "rimraf docs && docz build",
     "docs:deploy": "gh-pages -d docs",
@@ -55,6 +56,7 @@
     "jest-styled-components": "^6.3.1",
     "opn-cli": "latest",
     "react-test-renderer": "latest",
-    "rimraf": "latest"
+    "rimraf": "latest",
+    "codecov": "latest"
   }
 }
