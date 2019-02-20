@@ -11,7 +11,7 @@ A loading component
 
 ## Example
 
-![](./images/loading.gif)
+![](https://github.com/lili668668/react-content-loading/raw/master/images/loading.gif)
 
 ```js
 import { ContentLoading } from 'react-content-loading'
