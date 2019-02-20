@@ -90,7 +90,12 @@ About the design of props, please refer to [MDN linear gradient formal syntax](h
 |definition|string|Definition of the gradient line. `<angle>` or `to <side-or-corner>`|
 |stops|string array|List of color stops|
 
-## Fucntions
+## Methods
+
+- [angle](#angle)
+- [to](#to)
+- [appendColorStop](#appendcolorstop)
+- [toString](#tostring)
 
 ### [angle](#angle)
 
@@ -124,7 +129,7 @@ new LinearGradient()
   .angle('left', 'top') // set 'to left, top' to linear gradient
 ```
 
-### [appendColorStop](#appendColorStop)
+### [appendColorStop](#appendcolorstop)
 
 ||Name|Type|Required|Description|
 |:--|:--|:--|:--|:--|
@@ -139,7 +144,7 @@ new LinearGradient()
   .appendColorStop('#ffffff') // set '#ffffff' to linear gradient
 ```
 
-### [toString](#toString)
+### [toString](#tostring)
 
 ||Name|Type|Required|Description|
 |:--|:--|:--|:--|:--|
