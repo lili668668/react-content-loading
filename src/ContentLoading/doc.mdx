@@ -11,7 +11,7 @@ import ContentLoading from './ContentLoading'
 
 ## Description
 
-<!-- TODO -->
+A loading component.
 
 ## Props
 <PropsTable of={ContentLoading} />
@@ -22,4 +22,61 @@ import ContentLoading from './ContentLoading'
 
 <Playground>
   <ContentLoading />
+</Playground>
+
+## Advanced usage
+
+### Change background color
+
+<Playground>
+  <ContentLoading placeholderColor="#fecdcd" />
+</Playground>
+
+### Change loading color
+
+<Playground>
+  <ContentLoading placeholderColor="#fecdcd" loadingColor="#ff9393" />
+</Playground>
+
+### Change the height and width
+
+<Playground>
+  <ContentLoading
+    placeholderColor="#fecdcd"
+    loadingColor="#ff9393"
+    height="20px"
+    width="400px"
+  />
+</Playground>
+
+### Do more things ...
+
+<Playground>
+  <div>
+    <div style={{ height: 50, width: 400, display: 'flex', flexDirection: 'row', alignItems: 'end', justifyContent: 'space-between' }}>
+      <div style={{ display: 'flex' }}>
+        <ContentLoading height="50px" width="50px" />
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div style={{ paddingTop: 4 }}>
+          <ContentLoading height="15px" width="340px" />
+        </div>
+        <div style={{ paddingTop: 4 }}>
+          <ContentLoading height="15px" width="340px" />
+        </div>
+      </div>
+    </div>
+    <div style={{ paddingTop: 8 }}>
+      <ContentLoading height="20px" width="400px" />
+    </div>
+    <div style={{ paddingTop: 4 }}>
+      <ContentLoading height="20px" width="400px" />
+    </div>
+    <div style={{ paddingTop: 4 }}>
+      <ContentLoading height="20px" width="400px" />
+    </div>
+    <div style={{ paddingTop: 4 }}>
+      <ContentLoading height="20px" width="400px" />
+    </div>
+  </div>
 </Playground>

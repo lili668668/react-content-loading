@@ -9,6 +9,42 @@ A loading component
 
 `$ yarn add react-content-loading`
 
-## Basic usage
+## Example
 
-<!-- TODO -->
+![](./images/loading.gif)
+
+```js
+import { ContentLoading } from 'react-content-loading'
+
+() => {
+  return (
+    <div>
+      <div style={{ height: 50, width: 400, display: 'flex', flexDirection: 'row', alignItems: 'end', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex' }}>
+          <ContentLoading height="50px" width="50px" />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div style={{ paddingTop: 4 }}>
+            <ContentLoading height="15px" width="340px" />
+          </div>
+          <div style={{ paddingTop: 4 }}>
+            <ContentLoading height="15px" width="340px" />
+          </div>
+        </div>
+      </div>
+      <div style={{ paddingTop: 8 }}>
+        <ContentLoading height="20px" width="400px" />
+      </div>
+      <div style={{ paddingTop: 4 }}>
+        <ContentLoading height="20px" width="400px" />
+      </div>
+      <div style={{ paddingTop: 4 }}>
+        <ContentLoading height="20px" width="400px" />
+      </div>
+      <div style={{ paddingTop: 4 }}>
+        <ContentLoading height="20px" width="400px" />
+      </div>
+    </div>
+  )
+}
+```
