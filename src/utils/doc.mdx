@@ -4,10 +4,153 @@ menu: Utilities
 route: /utils/linear-gradient
 ---
 
+import { Playground } from 'docz'
+import styled from 'styled-components'
+import LinearGradient from './linearGradient'
+
 # linearGradient
+
+## Description
 
 A string builder to make css linear gradient string
 
-About linear gradient, please refer to [MDN linear gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)
+About linear gradient, please refer to [MDN linear gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient).
 
 ## Basic usage
+
+### import
+
+```js
+import { utils } from 'react-content-loading'
+const { LinearGradient } = utils
+```
+
+or
+
+```js
+import LinearGradient from 'react-content-loading/lib/utils'
+```
+
+### Usage
+
+```js
+const linearGradient = new LinearGradient()
+  .to('right')
+  .appendColorStop('#ffadad', '5%')
+  .appendColorStop('#e66465', '50%')
+  .appendColorStop('#ffadad', '95%')
+  .toString()
+console.log(`linearGradient: ${linearGradient}`)
+```
+
+The result of the example:
+
+<Playground>
+  <p>
+  {(() => {
+    const linearGradient = new LinearGradient()
+      .to('right')
+      .appendColorStop('#ffadad', '5%')
+      .appendColorStop('#e66465', '50%')
+      .appendColorStop('#ffadad', '95%')
+      .toString()
+    return `linearGradient: ${linearGradient}`
+  })()}
+  </p>
+</Playground>
+
+Putting the result in css stylesheet:
+
+```css
+{
+  background: linear-gradient(to right, #ffadad 5%, #e66465 50%, #ffadad 95%)
+}
+```
+
+<Playground>
+  <div>
+  {(() => {
+    const linearGradient = new LinearGradient()
+      .to('right')
+      .appendColorStop('#ffadad', '5%')
+      .appendColorStop('#e66465', '50%')
+      .appendColorStop('#ffadad', '95%')
+      .toString()
+    return (<div style={{ height: 300, width: 300, background: linearGradient }}></div>)
+  })()}
+  </div>
+</Playground>
+
+## Props
+
+About the design of props, please refer to [MDN linear gradient formal syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient#Formal_syntax).
+
+|Name|Type|Description|
+|:--|:--|:--|
+|definition|string|Definition of the gradient line. `<angle>` or `to <side-or-corner>`|
+|stops|string array|List of color stops|
+
+## Fucntions
+
+### [angle](#angle)
+
+||Name|Type|Required|Description|
+|:--|:--|:--|:--|:--|
+|param|angle|number or string|true|The angle of linear gradient|
+|return||LinearGradient||Return this|
+
+#### exmpale
+```js
+new LinearGradient()
+  .angle(45) // set 45deg to linear gradient
+
+new LinearGradient()
+  .angle('3.1416rad') // set 3.1426rad to linear gradient
+```
+
+### [to](#to)
+
+||Name|Type|Required|Description|
+|:--|:--|:--|:--|:--|
+|param|sides|string or string array|true|The direction of linear gradient. [ left \| right ] \|\| [ top \| bottom ]|
+|return||LinearGradient||Return this|
+
+#### exmpale
+```js
+new LinearGradient()
+  .to('right') // set 'to right' to linear gradient
+
+new LinearGradient()
+  .angle('left', 'top') // set 'to left, top' to linear gradient
+```
+
+### [appendColorStop](#appendColorStop)
+
+||Name|Type|Required|Description|
+|:--|:--|:--|:--|:--|
+|param|color|string|true|The hex-color value|
+|param|length|string|false|The percent of color in linear gradient|
+|return||LinearGradient||Return this|
+
+#### exmpale
+```js
+new LinearGradient()
+  .appendColorStop('#000000', '50%') // set '#000000 50%' to linear gradient
+  .appendColorStop('#ffffff') // set '#ffffff' to linear gradient
+```
+
+### [toString](#toString)
+
+||Name|Type|Required|Description|
+|:--|:--|:--|:--|:--|
+|return||string||Return linear gradient css string|
+
+#### exmpale
+```js
+new LinearGradient()
+  .to('right')
+  .appendColorStop('#ffadad', '5%')
+  .appendColorStop('#e66465', '50%')
+  .appendColorStop('#ffadad', '95%')
+  .toString() // 'linear-gradient(to right, #ffadad 5%, #e66465 50%, #ffadad 95%)'
+```

@@ -7,11 +7,12 @@ class linearGradient {
   angle(angle) {
     if (typeof angle === 'number') this.definition = `${angle}deg`
     else if (typeof angle === 'string') this.definition = angle
-    else throw new TypeError('Please input number or string for angle param')
+    else throw new TypeError('Please input number or string.')
     return this
   }
 
   to(...sides) {
+    if (sides.length === 0) throw new TypeError('Please input string.')
     this.definition = `to ${sides.join(' ')}`
     return this
   }
