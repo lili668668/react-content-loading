@@ -1,4 +1,4 @@
-class linearGradient {
+class LinearGradient {
   constructor () {
     this.definition = ''
     this.stops = []
@@ -28,4 +28,4 @@ class linearGradient {
   }
 }
 
-export default linearGradient
+export default LinearGradient
