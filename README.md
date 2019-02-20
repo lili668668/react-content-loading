@@ -1,5 +1,9 @@
 # react-content-loading
 
+![TravisCI](https://travis-ci.org/lili668668/react-content-loading.svg?branch=master)
+[![codecov](https://codecov.io/gh/lili668668/react-content-loading/branch/master/graph/badge.svg?token=jU3b8FMc2F)](https://codecov.io/gh/lili668668/react-content-loading)
+
+
 A loading component
 
 - [GitHub](http://github.com/lili668668/react-content-loading)

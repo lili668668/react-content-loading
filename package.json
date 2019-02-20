@@ -28,7 +28,7 @@
     "docs:deploy": "gh-pages -d docs",
     "build": "rimraf lib && babel src -d lib --ignore \"src/**/*.test.js\" --only \"src/**/*.js\"",
     "start": "yarn docs:dev",
-    "release": "yarn lint && yarn test && yarn build && yarn doc:build && yarn build && npm publish && yarn doc:deploy"
+    "release": "yarn lint && yarn test && yarn build && yarn docs:build && npm publish && yarn docs:deploy"
   },
   "dependencies": {
     "color": "^3.1.0",
