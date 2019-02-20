@@ -1,4 +1,4 @@
-import LinearGradient from './linearGradient'
+import LinearGradient from './LinearGradient'
 
 export default {
   LinearGradient
