@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentLoading should render correctly 1`] = `
+<styled.div
+  height="300px"
+  placeholderColor="#efefef"
+  width="300px"
+>
+  <styled.div
+    height="300px"
+    loadingBackground="linear-gradient(to right, rgba(239, 239, 239, 0.1) 5%, rgba(230, 230, 230, 0.8) 15%, rgba(230, 230, 230, 0.9) 50%, rgba(230, 230, 230, 0.8) 85%, rgba(239, 239, 239, 0.1) 95%)"
+    width="300px"
+  />
+</styled.div>
+`;

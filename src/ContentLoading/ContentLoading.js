@@ -4,17 +4,22 @@ import styled from 'styled-components'
 import Color from 'color'
 import LinearGradient from '../utils/linearGradient'
 
+export const getHeight = props => props.height
+export const getWidth = props => props.width
+export const getPlaceholderColor = props => props.placeholderColor
+export const getLoadingBackground = props => props.loadingBackground
+
 const StyledContainer = styled.div`
   overflow: hidden;
-  height: ${props => props.height};
-  width: ${props => props.width};
-  background: ${props => props.placeholderColor};
+  height: ${getHeight};
+  width: ${getWidth};
+  background: ${getPlaceholderColor};
 `
 
 const StyledLoading = styled.div`
-  height: ${props => props.height};
-  width: ${props => props.width};
-  background: ${props => props.loadingBackground};
+  height: ${getHeight};
+  width: ${getWidth};
+  background: ${getLoadingBackground};
 
   -moz-animation: 2s ease-in-out 0.5s infinite loading;
   animation: 2s ease-in-out 0.5s infinite loading;
